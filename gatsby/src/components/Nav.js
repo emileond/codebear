@@ -21,14 +21,6 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 768px) {
-    position: sticky;
-    height: 4vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
-  }
   a {
     &:hover {
       background: rgba(250, 250, 250, 0.1);
@@ -36,6 +28,20 @@ const StyledNav = styled.nav`
     &[aria-current='page'] {
       color: ${({ theme }) => theme.body};
       background: rgba(250, 250, 250, 0.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: sticky;
+    height: 4vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    a {
+      &[aria-current='page'] {
+        color: ${({ theme }) => theme.secondaryText};
+      }
     }
   }
   .logo {
@@ -102,6 +108,7 @@ const NavLink = styled((props) => <Link {...props} />)`
     align-items: center;
     justify-content: center;
     box-shadow: ${({ theme }) => theme.lineShadow};
+    }
     .link-logo {
       font-size: 3rem;
       margin-bottom: 0.8rem;
@@ -137,27 +144,27 @@ export default function Nav() {
         </Link>
         {navbarOpen ? (
           <Navbox open>
-            <NavLink to="/js" onClick={() => setNavbarOpen(!navbarOpen)>
+            <NavLink to="/js" onClick={() => setNavbarOpen(!navbarOpen)}>
               <SiJavascript className="link-logo js" />
               Javascript
             </NavLink>
-            <NavLink to="/react" onClick={() => setNavbarOpen(!navbarOpen)>
+            <NavLink to="/react" onClick={() => setNavbarOpen(!navbarOpen)}>
               <SiReact className="link-logo react" />
               React
             </NavLink>
-            <NavLink to="/vue" onClick={() => setNavbarOpen(!navbarOpen)>
+            <NavLink to="/vue" onClick={() => setNavbarOpen(!navbarOpen)}>
               <IoLogoVue className="link-logo vue" />
               Vue
             </NavLink>
-            <NavLink to="/gatsby" onClick={() => setNavbarOpen(!navbarOpen)>
+            <NavLink to="/gatsby" onClick={() => setNavbarOpen(!navbarOpen)}>
               <SiGatsby className="link-logo gatsby" />
               Gatsby
             </NavLink>
-            <NavLink to="/css" onClick={() => setNavbarOpen(!navbarOpen)>
+            <NavLink to="/css" onClick={() => setNavbarOpen(!navbarOpen)}>
               <SiCsswizardry className="link-logo css" />
               CSS
             </NavLink>
-            <NavLink to="/sass" onClick={() => setNavbarOpen(!navbarOpen)>
+            <NavLink to="/sass" onClick={() => setNavbarOpen(!navbarOpen)}>
               <SiSass className="link-logo sass" />
               Sass
             </NavLink>

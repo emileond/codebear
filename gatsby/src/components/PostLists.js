@@ -9,7 +9,7 @@ const StyledList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   .js {
     background: linear-gradient(
       to bottom,

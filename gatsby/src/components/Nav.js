@@ -137,27 +137,27 @@ export default function Nav() {
         </Link>
         {navbarOpen ? (
           <Navbox open>
-            <NavLink to="/js">
+            <NavLink to="/js" onClick={() => setNavbarOpen(!navbarOpen)>
               <SiJavascript className="link-logo js" />
               Javascript
             </NavLink>
-            <NavLink to="/react">
+            <NavLink to="/react" onClick={() => setNavbarOpen(!navbarOpen)>
               <SiReact className="link-logo react" />
               React
             </NavLink>
-            <NavLink to="/vue">
+            <NavLink to="/vue" onClick={() => setNavbarOpen(!navbarOpen)>
               <IoLogoVue className="link-logo vue" />
               Vue
             </NavLink>
-            <NavLink to="/gatsby">
+            <NavLink to="/gatsby" onClick={() => setNavbarOpen(!navbarOpen)>
               <SiGatsby className="link-logo gatsby" />
               Gatsby
             </NavLink>
-            <NavLink to="/css">
+            <NavLink to="/css" onClick={() => setNavbarOpen(!navbarOpen)>
               <SiCsswizardry className="link-logo css" />
               CSS
             </NavLink>
-            <NavLink to="/sass">
+            <NavLink to="/sass" onClick={() => setNavbarOpen(!navbarOpen)>
               <SiSass className="link-logo sass" />
               Sass
             </NavLink>

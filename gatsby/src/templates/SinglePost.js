@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import BasePortableText from '@sanity/block-content-to-react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import Code from '../components/Code';
 import Figure from '../components/Figure';
 
@@ -21,6 +22,10 @@ const StyledPost = styled.div`
     line-height: 1.8;
     font-family: 'Lora', serif;
   }
+  img {
+    border-radius: 0.5rem;
+    max-height: 300px;
+  }
   .caption {
     color: ${({ theme }) => theme.secondaryText};
   }
@@ -38,6 +43,7 @@ export default function singlePostPage({ data }) {
   return (
     <StyledPost>
       <h1>{post.title}</h1>
+      {post.image && <Img fluid={post.image.asset.fluid} />}
       <p className="caption">
         {post.publishedAt} - {post.author.name}
       </p>

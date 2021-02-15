@@ -20,19 +20,29 @@ const HomePage = ({ data }) => {
       />
       <h2>Javascript Posts</h2>
       <PostList id={jsPosts.id} posts={jsPosts} />
-      <Link>Ver todo sobre JS</Link>
+      <Link to={`/${jsPosts[0].category.title.toLowerCase()}`}>
+        Ver todo sobre JS
+      </Link>
       <h2>React Posts</h2>
       <PostList id={reactPosts.id} posts={reactPosts} />
-      <Link>Ver todo sobre React</Link>
+      <Link to={`/${reactPosts[0].category.title.toLowerCase()}`}>
+        Ver todo sobre React
+      </Link>
       <h2>Vue Posts</h2>
       <PostList id={vuePosts.id} posts={vuePosts} />
-      <Link>Ver todo sobre Vue</Link>
+      <Link to={`/${vuePosts[0].category.title.toLowerCase()}`}>
+        Ver todo sobre Vue
+      </Link>
       <h2>Gatsby Posts</h2>
       <PostList id={gatsbyPosts.id} posts={gatsbyPosts} />
-      <Link>Ver todo sobre Gatsby</Link>
+      <Link to={`/${gatsbyPosts[0].category.title.toLowerCase()}`}>
+        Ver todo sobre Gatsby
+      </Link>
       <h2>SASS Posts</h2>
       <PostList id={sassPosts.id} posts={sassPosts} />
-      <Link>Ver todo sobre SASS</Link>
+      <Link to={`/${sassPosts[0].category.title.toLowerCase()}`}>
+        Ver todo sobre SASS
+      </Link>
       <h2>CSS Posts</h2>
       <PostList id={cssPosts.id} posts={cssPosts} />
       <Link to={`/${cssPosts[0].category.title.toLowerCase()}`}>

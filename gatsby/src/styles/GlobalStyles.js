@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import stripes from '../assets/images/stripes.svg';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -24,15 +23,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    background: var(--red);
+    background: transparent;
     color: white;
     border: 0;
     padding: 0.6rem 1rem;
     border-radius: 2px;
     cursor: pointer;
-    --cast: 2px;
-    box-shadow: var(--cast) var(--cast) 0 var(--grey);
-    text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
     transition: all 0.2s;
     &:hover {
       --cast: 4px;
@@ -63,7 +59,6 @@ const GlobalStyles = createGlobalStyle`
   hr {
     border: 0;
     height: 8px;
-    background-image: url(${stripes});
     background-size: 1500px;
   }
 

@@ -14,22 +14,12 @@ import {
 import Logo from '../assets/images/logo.svg';
 
 const StyledNav = styled.nav`
-  background: #309f6b;
+  background: #343a40;
   margin-bottom: 2rem;
   padding: 2vh 5vw;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-  a {
-    &:hover {
-      background: rgba(250, 250, 250, 0.1);
-    }
-    &[aria-current='page'] {
-      color: ${({ theme }) => theme.body};
-      background: rgba(250, 250, 250, 0.1);
-    }
-  }
 
   @media (max-width: 768px) {
     position: sticky;
@@ -92,11 +82,19 @@ const NavLink = styled((props) => <Link {...props} />)`
   font-size: 0.9rem;
   font-weight: 400;
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin-right: 2vw;
+  transition: ${({ theme }) => theme.transition};
+  &:hover {
+      background: rgba(250, 250, 250, 0.05);
+    }
+    &[aria-current='page'] {
+      color: ${({ theme }) => theme.body};
+      background: rgba(250, 250, 250, 0.05);
+    }
   @media (max-width: 768px) {
     color: ${({ theme }) => theme.primaryText};
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     background: ${({ theme }) => theme.card};
     margin: 0;

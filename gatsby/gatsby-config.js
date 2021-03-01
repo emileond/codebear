@@ -4,12 +4,14 @@ dotenv.config({ path: '.env' });
 
 export default {
   siteMetadata: {
-    title: 'Code Bear 2.0',
+    title: 'CodeBear.dev',
     siteUrl: 'https://codebear.dev',
-    description: 'Blo sobre tech',
+    description: 'Blog sobre frontend en español',
+    twitter: '@codebear',
   },
   plugins: [
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-sanity',
       options: {

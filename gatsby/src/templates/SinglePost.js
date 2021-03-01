@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Code from '../components/Code';
 import Figure from '../components/Figure';
+import SEO from '../components/SEO';
 
 const StyledPost = styled.div`
   background: ${({ theme }) => theme.card};
@@ -41,15 +42,18 @@ const serializers = {
 export default function singlePostPage({ data }) {
   const post = data.sanityPost;
   return (
-    <StyledPost>
-      <h1>{post.title}</h1>
-      {post.image && <Img fluid={post.image.asset.fluid} />}
-      <p className="caption">
-        {post.publishedAt} - {post.author.name}
-      </p>
-      <BasePortableText blocks={post._rawBody} serializers={serializers} />
-      <p>By: {post.author.name}</p>
-    </StyledPost>
+    <>
+      <SEO title={post.title} image={post.image?.asset?.fluid?.src} />
+      <StyledPost>
+        <h1>{post.title}</h1>
+        {post.image && <Img fluid={post.image.asset.fluid} />}
+        <p className="caption">
+          {post.publishedAt} - {post.author.name}
+        </p>
+        <BasePortableText blocks={post._rawBody} serializers={serializers} />
+        <p>By: {post.author.name}</p>
+      </StyledPost>
+    </>
   );
 }
 export const query = graphql`

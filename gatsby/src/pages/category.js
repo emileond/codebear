@@ -1,12 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PostList from '../components/PostLists';
+import SEO from '../components/SEO';
 
 export default function CSSPage({ data }) {
   const posts = data.allSanityPost.nodes;
   const pageCategory = posts[0].category.title;
   return (
     <>
+      <SEO title={pageCategory} />
       <h1>{pageCategory} Posts</h1>
       <PostList id={posts.id} posts={posts} />
     </>

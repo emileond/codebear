@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 
 const StyledList = styled.div`
   padding: 1rem;
@@ -116,7 +115,6 @@ const PostList = ({ posts }) => (
     {posts.map((post) => (
       <SinglePost key={post.id} post={post} />
     ))}
-    <p>There are {posts.length} posts</p>
   </StyledList>
 );
 

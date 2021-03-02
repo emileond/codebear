@@ -13,7 +13,7 @@ const StyledList = styled.div`
   .js {
     background: linear-gradient(
       to bottom,
-      #f7df1e 5px,
+      #ffcf39 5px,
       ${({ theme }) => theme.card} 0
     );
   }
@@ -34,7 +34,7 @@ const StyledList = styled.div`
   .gatsby {
     background: linear-gradient(
       to bottom,
-      #663399 5px,
+      #6b4495 5px,
       ${({ theme }) => theme.card} 0
     );
   }

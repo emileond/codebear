@@ -2,14 +2,20 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PostList from '../components/PostLists';
 import SEO from '../components/SEO';
+import CategoryHero from '../components/CategoryHero';
 
 export default function CSSPage({ data }) {
   const posts = data.allSanityPost.nodes;
   const pageCategory = posts[0].category.title;
+  const pageDesc = posts[0].category.description;
   return (
     <>
       <SEO title={pageCategory} />
-      <h1>{pageCategory} Posts</h1>
+      <CategoryHero
+        h1={pageCategory === 'JS' ? 'Javascript' : pageCategory}
+        p={pageDesc}
+        category={pageCategory.toLowerCase()}
+      />
       <PostList id={posts.id} posts={posts} />
     </>
   );
@@ -26,6 +32,7 @@ export const query = graphql`
         }
         category {
           title
+          description
         }
         image {
           asset {

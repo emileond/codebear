@@ -37,6 +37,11 @@ export const query = graphql`
         author {
           name
         }
+        body {
+          children {
+            text
+          }
+        }
       }
     }
   }

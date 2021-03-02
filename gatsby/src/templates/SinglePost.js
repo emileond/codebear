@@ -41,6 +41,14 @@ const serializers = {
 
 export default function singlePostPage({ data }) {
   const post = data.sanityPost;
+  const plainText = post.body
+    .filter((block) => block.children)
+    .map((el) => el.children.map((child) => child.text).join(''))
+    .join('\n\n')
+    .replace(/(^\s*)|(\s*$)/gi, '')
+    .replace(/[ ]{2,}/gi, ' ')
+    .replace(/\n /, '\n');
+  const wordCount = plainText.split(' ').length;
   return (
     <>
       <SEO title={post.title} image={post.image?.asset?.fluid?.src} />
@@ -52,6 +60,7 @@ export default function singlePostPage({ data }) {
         </p>
         <BasePortableText blocks={post._rawBody} serializers={serializers} />
         <p>By: {post.author.name}</p>
+        <p>Word count: {wordCount}</p>
       </StyledPost>
     </>
   );
@@ -74,6 +83,11 @@ export const query = graphql`
       }
       category {
         title
+      }
+      body {
+        children {
+          text
+        }
       }
       _rawBody
     }

@@ -117,6 +117,11 @@ export const query = graphql`
         category {
           title
         }
+        body {
+          children {
+            text
+          }
+        }
         slug {
           current
         }

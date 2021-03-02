@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import ReadTime from './ReadTime';
 
 const StyledList = styled.div`
   padding: 1rem;
@@ -90,6 +91,19 @@ const StyledPostCard = styled((props) => <Link {...props} />)`
 
 const SinglePost = ({ post }) => {
   const postCategory = post.category.title.toLowerCase();
+  let plainText = '0';
+
+  if (post.body) {
+    plainText = post.body
+      .filter((block) => block.children)
+      .map((el) => el.children.map((child) => child.text).join(''))
+      .join('\n\n')
+      .replace(/(^\s*)|(\s*$)/gi, '')
+      .replace(/[ ]{2,}/gi, ' ')
+      .replace(/\n /, '\n');
+  }
+
+  const wordCount = plainText.split(' ').length;
 
   return (
     <StyledPostCard
@@ -101,7 +115,9 @@ const SinglePost = ({ post }) => {
       </div>
       <h3 className="post-title">{post.title}</h3>
       <div className="caption">
-        <span className="text-xs">10min read</span>
+        <span className="text-xs">
+          <ReadTime words={wordCount} />
+        </span>
       </div>
       {/* {post.image ? (
         <Img fluid={post.image.asset.fluid} alt={post.title} />

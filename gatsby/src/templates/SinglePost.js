@@ -25,7 +25,6 @@ const StyledPost = styled.div`
   }
   img {
     border-radius: 0.5rem;
-    max-height: 300px;
   }
   .caption {
     color: ${({ theme }) => theme.secondaryText};

@@ -11,19 +11,15 @@ import {
 
 const StyledHero = styled.div`
   color: ${({ theme }) => theme.primaryText};
+  line-height: 1.5;
   display: grid;
   grid-template-columns: repeat(9, minmax(0, 1fr));
   align-items: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   overflow: hidden;
   border-radius: 0.5rem;
   background: ${({ theme }) => theme.card};
-  /* background: linear-gradient(
-    180deg,
-    rgba(33, 37, 41, 1) 0%,
-    rgba(35, 73, 108, 1) 100%
-  ); */
   box-shadow: ${({ theme }) => theme.lineShadow};
   h1 {
     font-size: 32px;
@@ -33,6 +29,9 @@ const StyledHero = styled.div`
 const StyledContent = styled.div`
   grid-column: span 7 / span 7;
   padding: 2rem;
+  p {
+    white-space: pre-line;
+  }
 `;
 
 const CategoryBg = styled.div`

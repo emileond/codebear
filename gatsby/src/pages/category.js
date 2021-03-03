@@ -8,6 +8,7 @@ export default function CSSPage({ data }) {
   const posts = data.allSanityPost.nodes;
   const pageCategory = posts[0].category.title;
   const pageDesc = posts[0].category.description;
+  console.log(pageDesc[pageDesc.indexOf('.')]);
   return (
     <>
       <SEO title={pageCategory} />

@@ -15,7 +15,7 @@ import Logo from '../assets/images/logo.svg';
 
 const StyledNav = styled.nav`
   background: #343a40;
-  margin-bottom: 2rem;
+  margin-bottom: 0.7rem;
   padding: 2vh 5vw;
   display: flex;
   align-items: center;

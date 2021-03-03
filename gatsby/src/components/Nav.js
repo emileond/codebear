@@ -22,19 +22,6 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   z-index: 100;
 
-  @media (max-width: 768px) {
-    position: sticky;
-    height: 4vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
-    a {
-      &[aria-current='page'] {
-        color: ${({ theme }) => theme.secondaryText};
-      }
-    }
-  }
   .logo {
     display: inline-block;
     vertical-align: middle;
@@ -94,7 +81,7 @@ const NavLink = styled((props) => <Link {...props} />)`
       background: rgba(250, 250, 250, 0.05);
     }
   @media (max-width: 768px) {
-    color: ${({ theme }) => theme.primaryText};
+    color: ${({ theme }) => theme.secondaryText};
     font-size: 1.2rem;
     font-weight: 500;
     background: ${({ theme }) => theme.card};
@@ -107,6 +94,16 @@ const NavLink = styled((props) => <Link {...props} />)`
     align-items: center;
     justify-content: center;
     box-shadow: ${({ theme }) => theme.lineShadow};
+      &:hover {
+        color: ${({ theme }) => theme.primaryText};
+        background: ${({ theme }) => theme.card};
+        box-shadow: ${({ theme }) => theme.shadow};
+      }
+      &[aria-current='page'] {
+        color: ${({ theme }) => theme.primaryText};
+        background: ${({ theme }) => theme.card};
+        box-shadow: ${({ theme }) => theme.shadow};
+      }
     }
     .link-logo {
       font-size: 3rem;

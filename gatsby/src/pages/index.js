@@ -14,7 +14,7 @@ import PostList from '../components/PostLists';
 import SEO from '../components/SEO';
 
 const H2 = styled.h2`
-  text-align: center;
+  text-align: left;
   .link-logo {
     margin-right: 0.5rem;
     &.js {
@@ -51,11 +51,11 @@ const HomePage = ({ data }) => {
     <>
       <SEO title="Front-end explicado en español" />
       <Hero
-        h1="Front-End Web Development"
-        p="Javascript, React, Vue, CSS, SASS, Gatsby y más... Explicados para humanos."
+        h1="Front-end fácilmente explicado."
+        p="Notas prácticas, concisas y entendibles para todos los niveles. Que te ayudarán a mejorar tus conocimientos de javascript, react, vue, css y más."
       />
       <H2>
-        <SiJavascript className="link-logo js" />
+        {/* <SiJavascript className="link-logo js" /> */}
         Javascript
       </H2>
       <PostList id={jsPosts.id} posts={jsPosts} />
@@ -63,7 +63,7 @@ const HomePage = ({ data }) => {
         Ver todo sobre JS
       </Link> */}
       <H2>
-        <SiReact className="link-logo react" />
+        {/* <SiReact className="link-logo react" /> */}
         React
       </H2>
       <PostList id={reactPosts.id} posts={reactPosts} />
@@ -71,7 +71,7 @@ const HomePage = ({ data }) => {
         Ver todo sobre React
       </Link> */}
       <H2>
-        <IoLogoVue className="link-logo vue" />
+        {/* <IoLogoVue className="link-logo vue" /> */}
         Vue
       </H2>
       <PostList id={vuePosts.id} posts={vuePosts} />
@@ -79,7 +79,7 @@ const HomePage = ({ data }) => {
         Ver todo sobre Vue
       </Link> */}
       <H2>
-        <SiGatsby className="link-logo gatsby" />
+        {/* <SiGatsby className="link-logo gatsby" /> */}
         Gatsby
       </H2>
       <PostList id={gatsbyPosts.id} posts={gatsbyPosts} />
@@ -87,7 +87,7 @@ const HomePage = ({ data }) => {
         Ver todo sobre Gatsby
       </Link> */}
       <H2>
-        <SiSass className="link-logo sass" />
+        {/* <SiSass className="link-logo sass" /> */}
         SASS
       </H2>
       <PostList id={sassPosts.id} posts={sassPosts} />
@@ -95,7 +95,7 @@ const HomePage = ({ data }) => {
         Ver todo sobre SASS
       </Link> */}
       <H2>
-        <SiCsswizardry className="link-logo css" />
+        {/* <SiCsswizardry className="link-logo css" /> */}
         CSS
       </H2>
       <PostList id={cssPosts.id} posts={cssPosts} />

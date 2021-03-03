@@ -8,7 +8,7 @@ import Typography from '../styles/Typography';
 
 const ContentStyles = styled.div`
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 70rem;
   min-height: 85vh;
 `;
 

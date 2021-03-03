@@ -8,12 +8,12 @@ import Figure from '../components/Figure';
 import SEO from '../components/SEO';
 
 const StyledPost = styled.div`
-  background: ${({ theme }) => theme.card};
+  /* background: ${({ theme }) => theme.card}; */
   padding: 2rem;
   margin: 0 auto 2rem auto;
-  border-radius: 0.5rem;
+  /* border-radius: 1rem; */
   /* border: 1px solid ${({ theme }) => theme.border}; */
-  box-shadow: ${({ theme }) => theme.lineShadow};
+  /* box-shadow: ${({ theme }) => theme.lineShadow}; */
   max-width: 48rem;
   p,
   ul,
@@ -53,10 +53,10 @@ export default function singlePostPage({ data }) {
       <SEO title={post.title} image={post.image?.asset?.fluid?.src} />
       <StyledPost>
         <h1>{post.title}</h1>
-        {post.image && <Img fluid={post.image.asset.fluid} />}
         <p className="caption">
           {post.publishedAt} - {post.author.name}
         </p>
+        {post.image && <Img fluid={post.image.asset.fluid} />}
         <BasePortableText blocks={post._rawBody} serializers={serializers} />
         <p>By: {post.author.name}</p>
         <p>Word count: {wordCount}</p>

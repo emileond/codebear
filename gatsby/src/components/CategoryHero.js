@@ -45,22 +45,22 @@ const CategoryBg = styled.div`
   height: 100%;
   /* background: linear-gradient(to bottom, #3398fe, #663399); */
   &.js {
-    background: linear-gradient(to bottom, #ffcf39, #ffa505);
+    background: ${({ theme }) => theme.jsGradient};
   }
   &.react {
-    background: linear-gradient(to bottom, #61dafb, #2c8cd2);
+    background: ${({ theme }) => theme.reactGradient};
   }
   &.vue {
-    background: linear-gradient(to bottom, #41b882, #10456d);
+    background: ${({ theme }) => theme.vueGradient};
   }
   &.gatsby {
-    background: linear-gradient(to bottom, #6b4495, #400a68);
+    background: ${({ theme }) => theme.gatsbyGradient};
   }
   &.css {
-    background: linear-gradient(to bottom, #3398fe, #0486d4);
+    background: ${({ theme }) => theme.cssGradient};
   }
   &.sass {
-    background: linear-gradient(to bottom, #cd6a9e, #912f60);
+    background: ${({ theme }) => theme.sassGradient};
   }
 `;
 

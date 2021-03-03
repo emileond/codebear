@@ -5,11 +5,18 @@ const StyledFooter = styled.footer`
   border-top: 1px solid ${({ theme }) => theme.border};
   background: ${({ theme }) => theme.secondaryBody};
   padding: 1rem 0;
+  text-align: center;
 `;
 
 const Footer = () => (
   <StyledFooter>
-    <p> 👋 Made by me - {new Date().getFullYear()}</p>
+    <p>
+      {' '}
+      ©{new Date().getFullYear()} -{' '}
+      <a href="https://emiliosanchez.dev" rel="noreferrer" target="_blank">
+        Emilio Sanchez
+      </a>
+    </p>
   </StyledFooter>
 );
 

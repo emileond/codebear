@@ -9,10 +9,10 @@ const StyledHero = styled.div`
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 40vh;
+  height: 45vh;
   margin-bottom: 2rem;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background: rgb(33, 37, 41);
   background: linear-gradient(
     180deg,
@@ -20,6 +20,14 @@ const StyledHero = styled.div`
     rgba(35, 73, 108, 1) 100%
   );
   box-shadow: ${({ theme }) => theme.lineShadow};
+  h1 {
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 1.1rem;
+    max-width: 680px;
+    line-height: 24px;
+  }
 `;
 
 export default function Hero({ h1, p }) {

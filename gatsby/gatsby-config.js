@@ -12,6 +12,8 @@ export default {
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-Image',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -23,7 +25,7 @@ export default {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/, // See below to configure properly
+          include: /svg/, // See below to configure properly
         },
       },
     },

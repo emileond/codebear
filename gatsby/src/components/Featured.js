@@ -1,17 +1,16 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
-import ReadTime from './ReadTime';
+import Grid from './Grid'; FeaturedPost
+import { Link } from 'gatsby';
 
-const StyledPostCard = styled((props) => <Link {...props} />)`
-  /* border: 0.5px solid ${({ theme }) => theme.border}; */
+const FeaturedPost = styled((props) => <Link {...props} />)`
+  grid-column: span 2 / span 2;
   padding: 1rem;
   border-radius: 1rem;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   min-height: 120px;
   box-shadow: ${({ theme }) => theme.lineShadow};
@@ -82,41 +81,28 @@ const StyledPostCard = styled((props) => <Link {...props} />)`
   }
 `;
 
-const PostCard = ({ post }) => {
-  const postCategory = post.category.title.toLowerCase();
-  let plainText = '0';
+const Swag = styled.div`
+  background: ${({ theme }) => theme.secondaryCard};
+`;
 
-  if (post.body) {
-    plainText = post.body
-      .filter((block) => block.children)
-      .map((el) => el.children.map((child) => child.text).join(''))
-      .join('\n\n')
-      .replace(/(^\s*)|(\s*$)/gi, '')
-      .replace(/[ ]{2,}/gi, ' ')
-      .replace(/\n /, '\n');
-  }
-
-  const wordCount = plainText.split(' ').length;
-
+export default function Featured({ post }) {
+  const postCategory = 'react'
   return (
-    <StyledPostCard
-      to={`/${postCategory}/${post.slug.current}`}
-      className={postCategory}
-    >
-      <div className="category">
-        <span className="text-xs">{postCategory}</span>
-      </div>
-      <h3 className="post-title">{post.title}</h3>
-      <div className="caption">
-        <span className="text-xs">
-          <ReadTime words={wordCount} />
-        </span>
-      </div>
-      {/* {post.image ? (
-          <Img fluid={post.image.asset.fluid} alt={post.title} />
-        ) : null} */}
-    </StyledPostCard>
-  );
-};
-
-export default PostCard;
+    <Grid>
+      {/* <Swag>DOS</Swag> */}
+      <FeaturedPost
+      to={`/${postCategory}/`} className="react"
+      >
+        <div className="category">
+          <span className="text-xs">React</span>
+        </div>
+        <h3 className="post-title">Esto es un Post destacado</h3>
+        <div className="caption">
+          <span className="text-xs">
+          </span>
+        </div>
+      </FeaturedPost>
+      <Swag>DOS</Swag>
+    </Grid>
+  )
+}

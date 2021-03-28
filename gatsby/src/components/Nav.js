@@ -11,10 +11,10 @@ import {
   SiSass,
 } from 'react-icons/si';
 
-import Logo from '../assets/images/logo.svg';
+import Logo from '../assets/svg/logo.svg';
 
 const StyledNav = styled.nav`
-  background: #343a40;
+  background: #2b2f36;
   margin-bottom: 0.7rem;
   padding: 2vh 5vw;
   display: flex;

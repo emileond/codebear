@@ -132,10 +132,9 @@ const NavLink = styled((props) => <Link {...props} />)`
 
 export default function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const html = document.querySelector('html')
 
   useEffect(() => {
-    navbarOpen ? (html.style.overflow = 'hidden') : (html.style.overflow = 'visible')
+    navbarOpen ? (document.querySelector('html').style.overflow = 'hidden') : (document.querySelector('html').style.overflow = 'visible')
   }, [navbarOpen]);
 
   return (

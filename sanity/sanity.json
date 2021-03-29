@@ -5,7 +5,7 @@
     "dataset": "production"
   },
   "project": {
-    "name": "slicks-slices"
+    "name": "codebear"
   },
   "plugins": [
     "@sanity/base",
@@ -15,7 +15,10 @@
     "@sanity/desk-tool",
     "@sanity/google-maps-input",
     "@sanity/dashboard",
-    "@sanity/code-input"
+    "@sanity/code-input",
+    "dashboard-widget-netlify",
+    "dashboard-widget-document-chart",
+    "dashboard-widget-document-list"
   ],
   "env": {
     "development": {
@@ -28,6 +31,10 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "src/dashboardConfig.js"
     }
   ]
 }

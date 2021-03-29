@@ -9,6 +9,7 @@ export default {
       type: 'string',
       title: 'Title',
       description: 'Titles should be catchy, descriptive, and not too long',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -20,6 +21,7 @@ export default {
         source: 'title',
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'image',
@@ -42,11 +44,13 @@ export default {
       to: {
         type: 'category',
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'author',
@@ -55,6 +59,7 @@ export default {
       to: {
         type: 'author',
       },
+      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {

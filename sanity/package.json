@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Wes Bos <wesbos@gmail.com>",
+  "author": "Emilio Sanchez <sonarart@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "lint": "eslint .",
@@ -19,21 +19,24 @@
     ]
   },
   "dependencies": {
-    "@sanity/base": "^2.3.2",
+    "@sanity/base": "^2.5.0",
     "@sanity/code-input": "^2.2.6",
     "@sanity/components": "^2.2.6",
-    "@sanity/core": "^2.2.6",
+    "@sanity/core": "^2.5.0",
     "@sanity/dashboard": "^2.2.6",
-    "@sanity/default-layout": "^2.3.2",
+    "@sanity/default-layout": "^2.5.0",
     "@sanity/default-login": "^2.2.6",
-    "@sanity/desk-tool": "^2.3.2",
-    "@sanity/google-maps-input": "^2.3.2",
-    "@sanity/structure": "^2.2.6",
+    "@sanity/desk-tool": "^2.5.0",
+    "@sanity/google-maps-input": "^2.5.0",
+    "@sanity/structure": "^2.5.0",
     "@sanity/vision": "^2.2.6",
     "prop-types": "^15.7",
     "react": "^16.13",
     "react-dom": "^16.13",
-    "react-icons": "^3.11.0"
+    "react-icons": "^3.11.0",
+    "sanity-plugin-dashboard-widget-document-chart": "^0.0.6",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.11",
+    "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

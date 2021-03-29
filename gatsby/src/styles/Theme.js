@@ -13,6 +13,7 @@ export const lightTheme = {
   primaryText: '#363537',
   secondaryText: '#718096',
   invertedText: '#f8f9fa',
+  link: '#364fc7',
 
   // Border
   border: '#dee2e6',

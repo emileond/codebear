@@ -9,7 +9,7 @@ import SEO from '../components/SEO';
 
 const StyledPost = styled.div`
   /* background: ${({ theme }) => theme.card}; */
-  padding: 2rem;
+  padding: 1rem;
   margin: 0 auto 2rem auto;
   /* border-radius: 1rem; */
   /* border: 1px solid ${({ theme }) => theme.border}; */

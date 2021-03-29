@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { HiMenu, HiSun, HiMenuAlt3 } from 'react-icons/hi';
@@ -81,7 +81,7 @@ const NavLink = styled((props) => <Link {...props} />)`
       background: rgba(250, 250, 250, 0.05);
     }
   @media (max-width: 768px) {
-    color: ${({ theme }) => theme.secondaryText};
+    color: ${({ theme }) => theme.primaryText};
     font-size: 1.2rem;
     font-weight: 500;
     background: ${({ theme }) => theme.card};
@@ -95,12 +95,12 @@ const NavLink = styled((props) => <Link {...props} />)`
     justify-content: center;
     box-shadow: ${({ theme }) => theme.lineShadow};
       &:hover {
-        color: ${({ theme }) => theme.primaryText};
+        color: ${({ theme }) => theme.link};
         background: ${({ theme }) => theme.card};
         box-shadow: ${({ theme }) => theme.shadow};
       }
       &[aria-current='page'] {
-        color: ${({ theme }) => theme.primaryText};
+        color: ${({ theme }) => theme.secondaryText};
         background: ${({ theme }) => theme.card};
         box-shadow: ${({ theme }) => theme.shadow};
       }
@@ -132,6 +132,12 @@ const NavLink = styled((props) => <Link {...props} />)`
 
 export default function Nav() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const html = document.querySelector('html')
+
+  useEffect(() => {
+    navbarOpen ? (html.style.overflow = 'hidden') : (html.style.overflow = 'visible')
+  }, [navbarOpen]);
+
   return (
     <StyledNav>
       <div>
@@ -186,6 +192,7 @@ export default function Nav() {
           onClick={() => setNavbarOpen(!navbarOpen)}
         >
           {navbarOpen ? <HiMenuAlt3 /> : <HiMenu />}
+
         </Toggle>
       </div>
     </StyledNav>

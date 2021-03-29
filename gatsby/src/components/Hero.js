@@ -11,8 +11,9 @@ const StyledHero = styled.div`
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 45vh;
+  /* height: 45vh; */
   margin-bottom: 2rem;
+  padding: 8vh 0;
   overflow: hidden;
   border-radius: 1rem;
   background-image: url(${HeroImg});
@@ -20,8 +21,9 @@ const StyledHero = styled.div`
   background-color: rgba(33, 37, 41, .2);
   background-blend-mode: overlay;
   box-shadow: ${({ theme }) => theme.lineShadow};
+  z-index: -1;
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     /* text-shadow: 2px 2px 1rem #2b2f36; */
   }
   p {

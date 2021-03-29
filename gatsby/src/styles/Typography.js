@@ -24,6 +24,10 @@ const Typography = createGlobalStyle`
     overflow-wrap: break-word;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    @media (max-width: 768px) {
+      font-size: 2.4rem;
+  }
+
   }
   h2 {
     font-size: 1.8rem;

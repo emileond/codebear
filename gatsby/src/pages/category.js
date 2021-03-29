@@ -6,6 +6,7 @@ import CategoryHero from '../components/CategoryHero';
 
 export default function CSSPage({ data }) {
   const posts = data.allSanityPost.nodes;
+  console.log(data)
   const pageCategory = posts[0].category.title;
   const pageDesc = posts[0].category.description;
   console.log(pageDesc[pageDesc.indexOf('.')]);

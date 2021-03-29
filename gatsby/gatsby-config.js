@@ -12,7 +12,6 @@ export default {
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-Image',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-sanity',

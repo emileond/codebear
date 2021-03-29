@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Grid from './Grid'; FeaturedPost
+import Grid from './Grid';
 import { Link } from 'gatsby';
 
 const FeaturedPost = styled((props) => <Link {...props} />)`

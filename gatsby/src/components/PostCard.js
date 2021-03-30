@@ -74,7 +74,6 @@ const StyledPostCard = styled((props) => <Link {...props} />)`
   .caption {
     color: ${({ theme }) => theme.secondaryText};
     margin-top: 0.25rem;
-    color: rgba(75, 85, 99, 1);
   }
   &:hover {
     box-shadow: ${({ theme }) => theme.shadow};

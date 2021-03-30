@@ -14,7 +14,7 @@ import {
 import Logo from '../assets/svg/logo.svg';
 
 const StyledNav = styled.nav`
-  background: #2b2f36;
+  background: ${({ theme }) => theme.navBg};
   margin-bottom: 0.7rem;
   padding: 2vh 5vw;
   display: flex;
@@ -77,7 +77,6 @@ const NavLink = styled((props) => <Link {...props} />)`
       background: rgba(250, 250, 250, 0.05);
     }
     &[aria-current='page'] {
-      color: ${({ theme }) => theme.body};
       background: rgba(250, 250, 250, 0.05);
     }
   @media (max-width: 768px) {
@@ -130,7 +129,7 @@ const NavLink = styled((props) => <Link {...props} />)`
   }
 `;
 
-export default function Nav() {
+export default function Nav({children}) {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   useEffect(() => {
@@ -182,9 +181,7 @@ export default function Nav() {
         )}
       </div>
       <div>
-        <Toggle>
-          <HiSun />
-        </Toggle>
+        {children}
         <Toggle
           menu
           navbarOpen={navbarOpen}

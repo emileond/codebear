@@ -39,7 +39,7 @@ const CategoryBg = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.card};
+  color: ${({ theme }) => theme.invertedText};
   font-size: 5rem;
   text-align: center;
   height: 100%;

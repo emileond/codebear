@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primaryText};
     background: ${({ theme }) => theme.body};
   }
-  }
+
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;

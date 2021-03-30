@@ -30,7 +30,7 @@ const Toggle = styled.div`
   margin: 0 0 0 2rem;
   line-height: 0;
   color: white;
-  font-size: 1.5rem;
+  font-size: 24px;
   height: 100%;
   cursor: pointer;
 `;
@@ -49,14 +49,13 @@ return (
         >
           <ImFontSize />
     </Toggle>
-    <StyledReactTooltip />
+    <StyledReactTooltip place="bottom" effect="float"/>
     <Toggle data-tip="Toggle dark mode"
           onClick={() => setIsDark(isDark === "light" ? "dark" : "light")}
         >
           {isDark === "dark" ? <HiSun /> : <HiMoon/>} 
         </Toggle>
-        <StyledReactTooltip />
-
+        <StyledReactTooltip place="bottom" effect="float"/>
     </Nav>
 
     <ContentStyles>{children}</ContentStyles>

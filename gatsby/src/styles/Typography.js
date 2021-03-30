@@ -30,9 +30,9 @@ const Typography = createGlobalStyle`
 
   }
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
   }
   a {

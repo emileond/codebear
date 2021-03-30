@@ -15,6 +15,9 @@ const StyledPost = styled.div`
   /* border: 1px solid ${({ theme }) => theme.border}; */
   /* box-shadow: ${({ theme }) => theme.lineShadow}; */
   max-width: 48rem;
+  a {
+    color: ${({ theme }) => theme.link};
+  }
   p,
   ul,
   ol {
@@ -28,6 +31,13 @@ const StyledPost = styled.div`
   }
   .caption {
     color: ${({ theme }) => theme.secondaryText};
+  }
+  code {
+    color: ${({ theme }) => theme.code};
+    font-size: 1rem;
+    background: ${({ theme }) => theme.secondaryBody};
+    border-radius: .5rem;
+    padding: 0 .5rem;
   }
 `;
 

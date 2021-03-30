@@ -2,14 +2,14 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   html {
+    font-size: ${props => (props.bigText ? '21px' : '16px')};
   }
 
   body {
-    font-size: 16px;
     color: ${({ theme }) => theme.primaryText};
     background: ${({ theme }) => theme.body};
   }
-
+  }
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
@@ -34,19 +34,19 @@ const GlobalStyles = createGlobalStyle`
   }
 
   /* Scrollbar Styles */
-  body::-webkit-scrollbar {
-    width: 12px;
+  /* body::-webkit-scrollbar {
+    width: 8px;
   }
   html {
     scrollbar-width: thin;
   }
   body::-webkit-scrollbar-track {
-    background: var(--white);
+    background: transparent;
   }
   body::-webkit-scrollbar-thumb {
     background-color: gray ;
     border-radius: 6px;
-    border: 3px solid var(--white);
+    border: 3px solid ; */
   }
 
   hr {

@@ -17,8 +17,10 @@ export const lightTheme = {
   primaryText: '#363537',
   secondaryText: '#718096',
   invertedText: '#f8f9fa',
-  link: '#3b5bdb',
-  code: '#c2255c',
+  link: '#4263eb',
+  linkHover: '#364fc7',
+  code: '#d6336c',
+  codeBg: '#dee2e6',
 
   // Border
   border: '#dee2e6',
@@ -63,8 +65,10 @@ export const darkTheme = {
   primaryText: '#e9ecef',
   secondaryText: '#adb5bd',
   invertedText: '#dee2e6',
-  link: '#3b5bdb',
-  code: '#c2255c',
+  link: '#5c7cfa',
+  linkHover: '#4263eb',
+  code: '#3fc183',
+  codeBg: '#1F2937',
 
   // Border
   border: '#212f3d',

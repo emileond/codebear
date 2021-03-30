@@ -17,6 +17,10 @@ const StyledPost = styled.div`
   max-width: 48rem;
   a {
     color: ${({ theme }) => theme.link};
+    border-bottom: 2px solid;
+    &:hover {
+      color: ${({ theme }) => theme.linkHover};
+    }
   }
   p,
   ul,
@@ -34,10 +38,10 @@ const StyledPost = styled.div`
   }
   code {
     color: ${({ theme }) => theme.code};
-    font-size: 1rem;
-    background: ${({ theme }) => theme.secondaryBody};
+    font-size: 1.1rem;
+    background: ${({ theme }) => theme.codeBg};
     border-radius: .5rem;
-    padding: 0 .5rem;
+    padding: .1rem .5rem;
   }
 `;
 

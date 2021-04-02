@@ -5,15 +5,16 @@ import styled from 'styled-components';
 import ReadTime from './ReadTime';
 
 const StyledPostCard = styled((props) => <Link {...props} />)`
-  /* border: 0.5px solid ${({ theme }) => theme.border}; */
+  box-sizing: border-box;
   padding: 1rem;
   border-radius: 1rem;
+  border: 1px solid ${({ theme }) => theme.border};
   text-align: center;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  min-height: 120px;
+  min-height: 140px;
   box-shadow: ${({ theme }) => theme.lineShadow};
   transition: ${({ theme }) => theme.transition};
   span {
@@ -102,11 +103,11 @@ const PostCard = ({ post }) => {
       to={`/${postCategory}/${post.slug.current}`}
       className={postCategory}
     >
-      <div className="category">
+      <div className="category Tilt-inner">
         <span className="text-xs">{postCategory}</span>
       </div>
-      <h3 className="post-title">{post.title}</h3>
-      <div className="caption">
+      <h3 className="post-title Tilt-inner">{post.title}</h3>
+      <div className="caption Tilt-inner">
         <span className="text-xs">
           <ReadTime words={wordCount} />
         </span>

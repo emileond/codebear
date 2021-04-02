@@ -10,11 +10,13 @@ import {
   SiCsswizardry,
   SiSass,
 } from 'react-icons/si';
+import Tilt from 'react-tilt';
 
 const StyledMoreCard = styled((props) => <Link {...props} />)`
   color: ${({ theme }) => theme.secondaryText};
   padding: 1rem;
   border-radius: 1rem;
+  border: 1px solid ${({ theme }) => theme.border};
   display: grid;
   grid-template-rows: 1fr 1fr;
   background: ${({ theme }) => theme.secondaryBody};
@@ -59,7 +61,7 @@ const StyledMoreCard = styled((props) => <Link {...props} />)`
       background: ${({ theme }) => theme.sassGradient};
     }
     .icon {
-      font-size: 58px;
+      font-size: 3.2rem;
       color: rgba(255, 255, 255, 0.5);
     }
     .arrow-icon {
@@ -76,7 +78,7 @@ const Title = styled.div`
     margin-left: 0.5rem;
   }
   .icon {
-    font-size: 42px;
+    font-size: 2.3rem;
     vertical-align: middle;
     color: ${({ theme }) => theme.secondaryHover};
     transition: ${({ theme }) => theme.transition};

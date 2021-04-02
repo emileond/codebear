@@ -1,6 +1,6 @@
 export const lightTheme = {
   // Body bg colors
-  body: '#F9FAFB',
+  body: '#F4F6F7',
   secondaryBody: '#e9ecef',
 
   // Nav Bg
@@ -10,7 +10,7 @@ export const lightTheme = {
   card: '#fff',
   secondaryCard: '#dee2e6',
 
-  hover: '#f8f9fa',
+  hover: '#f8f9fa', // f9fafb
   secondaryHover: '#ced4da',
 
   // Text color
@@ -23,7 +23,7 @@ export const lightTheme = {
   codeBg: '#dee2e6',
 
   // Border
-  border: '#dee2e6',
+  border: '#d5d9de',
 
   // Shadows
   shadow: '0px 4px 16px rgb(46 41 51 / 8%), 0px 8px 24px rgb(71 63 79 / 16%)',

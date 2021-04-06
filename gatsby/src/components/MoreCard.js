@@ -69,6 +69,45 @@ const StyledMoreCard = styled((props) => <Link {...props} />)`
       transition: font-size 100ms cubic-bezier(0.5, 0, 0.2, 0);
     }
   }
+  &:focus {
+    box-shadow: ${({ theme }) => theme.shadow};
+    transition: ${({ theme }) => theme.transition};
+    &.js {
+      background: ${({ theme }) => theme.jsGradient};
+      color: ${({ theme }) => theme.primaryText};
+      h3 {
+        color: ${({ theme }) => theme.primaryText};
+      }
+    }
+    &.react {
+      background: ${({ theme }) => theme.reactGradient};
+      color: ${({ theme }) => theme.invertedText};
+    }
+    &.vue {
+      background: ${({ theme }) => theme.vueGradient};
+      color: ${({ theme }) => theme.invertedText};
+    }
+    &.gatsby {
+      background: ${({ theme }) => theme.gatsbyGradient};
+      color: ${({ theme }) => theme.invertedText};
+    }
+    &.css {
+      background: ${({ theme }) => theme.cssGradient};
+      color: ${({ theme }) => theme.invertedText};
+    }
+    &.sass {
+      color: ${({ theme }) => theme.invertedText};
+      background: ${({ theme }) => theme.sassGradient};
+    }
+    .icon {
+      font-size: 3.2rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .arrow-icon {
+      font-size: 1.5rem;
+      transition: font-size 100ms cubic-bezier(0.5, 0, 0.2, 0);
+    }
+  }
 `;
 
 const Title = styled.div`

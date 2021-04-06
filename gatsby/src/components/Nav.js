@@ -25,7 +25,7 @@ const StyledNav = styled.nav`
   .logo {
     display: inline-block;
     vertical-align: middle;
-    width: 23vh;
+    width: 150px;
   }
 `;
 

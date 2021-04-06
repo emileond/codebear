@@ -77,8 +77,12 @@ const StyledPostCard = styled((props) => <Link {...props} />)`
     margin-top: 0.25rem;
   }
   &:hover {
+    color: ${({ theme }) => theme.linkHover};
     box-shadow: ${({ theme }) => theme.shadow};
     transition: ${({ theme }) => theme.transition};
+  }
+  &:focus {
+    color: ${({ theme }) => theme.link};
   }
 `;
 

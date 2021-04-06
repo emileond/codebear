@@ -44,13 +44,13 @@ return (
     <GlobalStyles bigText={bigText}/>
     <Typography />
     <Nav>
-    <Toggle data-tip="Toggle large font size"
+    <Toggle data-tip="Cambiar tamaño de letra"
           onClick={() => setBigText(bigText === false ? true : false)}
         >
           <ImFontSize />
     </Toggle>
     <StyledReactTooltip place="bottom" effect="float"/>
-    <Toggle data-tip="Toggle dark mode"
+    <Toggle data-tip="Activar modo oscuro"
           onClick={() => setIsDark(isDark === "light" ? "dark" : "light")}
         >
           {isDark === "dark" ? <HiSun /> : <HiMoon/>} 

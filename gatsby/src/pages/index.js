@@ -14,6 +14,7 @@ import PostList from '../components/PostLists';
 import MoreCard from '../components/MoreCard';
 import Featured from '../components/Featured';
 import SEO from '../components/SEO';
+import HeroNew from '../components/HeroNew';
 
 const H2 = styled.h2`
   text-align: left;

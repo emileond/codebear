@@ -26,7 +26,7 @@ export const lightTheme = {
   border: '#d5d9de',
 
   // Shadows
-  shadow: '0px 4px 16px rgb(46 41 51 / 8%), 0px 8px 24px rgb(71 63 79 / 16%)',
+  shadow: '0px 4px 16px rgb(18 24 30 / 8%), 0px 8px 24px rgb(63 67 79 / 16%)',
   lineShadow:
     'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px',
 

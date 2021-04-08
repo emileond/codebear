@@ -14,10 +14,10 @@ export const lightTheme = {
   secondaryHover: '#ced4da',
 
   // Text color
-  primaryText: '#363537',
+  primaryText: '#212529',
   secondaryText: '#718096',
   invertedText: '#f8f9fa',
-  link: '#4263eb',
+  link: '#212529',
   linkHover: '#364fc7',
   code: '#d6336c',
   codeBg: '#dee2e6',

@@ -8,13 +8,12 @@ import Figure from '../components/Figure';
 import SEO from '../components/SEO';
 
 const StyledPost = styled.div`
-  /* background: ${({ theme }) => theme.card}; */
   padding: 1rem;
   margin: 0 auto 2rem auto;
   /* border-radius: 1rem; */
   /* border: 1px solid ${({ theme }) => theme.border}; */
   /* box-shadow: ${({ theme }) => theme.lineShadow}; */
-  max-width: 48rem;
+  max-width: 43rem;
   a {
     color: ${({ theme }) => theme.link};
     border-bottom: 2px solid;
@@ -22,12 +21,22 @@ const StyledPost = styled.div`
       color: ${({ theme }) => theme.linkHover};
     }
   }
+  h1 {
+    margin-top: 3.2rem;
+    font-weight: 700;
+  }
+  h2 {
+    margin-top: 3.2rem;
+  }
+  h3 {
+    margin-top: 2.4rem;
+  }
   p,
   ul,
   ol {
     font-size: 1.23rem;
     margin-bottom: 1.25rem;
-    line-height: 1.8;
+    line-height: 1.7;
     font-family: 'Lora', serif;
   }
   img {
@@ -73,7 +82,6 @@ export default function singlePostPage({ data }) {
         {post.image && <Img fluid={post.image.asset.fluid} />}
         <BasePortableText blocks={post._rawBody} serializers={serializers} />
         <p>By: {post.author.name}</p>
-        <p>Word count: {wordCount}</p>
       </StyledPost>
     </>
   );

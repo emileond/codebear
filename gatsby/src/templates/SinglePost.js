@@ -22,7 +22,7 @@ const StyledPost = styled.div`
     }
   }
   h1 {
-    margin-top: 3.2rem;
+    margin-top: 2.4rem;
     font-weight: 700;
   }
   h2 {

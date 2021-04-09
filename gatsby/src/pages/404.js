@@ -4,10 +4,11 @@ import NotFoundImg from '../assets/images/404.png';
 import { Link } from 'gatsby';
 
 const StyledNotFound = styled.div`
-display: block;
 margin: 0 auto;
-width: 560px;
-height: 294px;
+width: 100%;
+max-width: 560px;
+height: 52.5vw;
+max-height: 295px;
 background-image: url(${NotFoundImg});
 background-size: cover;
 `

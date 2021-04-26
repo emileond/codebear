@@ -96,7 +96,7 @@ export default function Featured({ post }) {
         <div className="category">
           <span className="text-xs">React</span>
         </div>
-        <h3 className="post-title">Esto es un Post destacado.</h3>
+        <h3 className="post-title">Post destacado.</h3>
         <div className="caption">
           <span className="text-xs">
           </span>

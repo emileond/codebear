@@ -29,7 +29,7 @@ export default function SEO({ children, location, description, title, image }) {
       <meta name="description" content={site.siteMetadata.description} />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="image" content={image || OGImage} />
+      <meta property="og:image" content={image || OGImage} />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta
         property="og:site_name"

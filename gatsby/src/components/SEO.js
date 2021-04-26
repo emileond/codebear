@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
-import OGImage from '../assets/images/og.png'
 
 export default function SEO({ children, location, description, title, image }) {
   const { site } = useStaticQuery(graphql`
@@ -29,7 +28,7 @@ export default function SEO({ children, location, description, title, image }) {
       <meta name="description" content={site.siteMetadata.description} />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image || OGImage} />
+      <meta property="image" content={image || '/og.png'} />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta
         property="og:site_name"

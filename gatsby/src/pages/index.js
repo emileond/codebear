@@ -110,7 +110,7 @@ const HomePage = ({ data }) => {
         Ver todo sobre SASS
       </Link> */}
       <H2>
-        {/* <SiCsswizardry className="link-logo css" /> */}
+        <SiCsswizardry className="link-logo css" />
         CSS
       </H2>
       <PostList id={cssPosts.id} posts={cssPosts}>

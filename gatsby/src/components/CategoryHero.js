@@ -51,13 +51,13 @@ const CategoryBg = styled.div`
     background: ${({ theme }) => theme.jsGradient};
   }
   &.html {
-    background: ${({ theme }) => theme.jsGradient};
+    background: ${({ theme }) => theme.htmlGradient};
   }
   &.next {
-    background: ${({ theme }) => theme.jsGradient};
+    background: ${({ theme }) => theme.nextGradient};
   }
   &.svelte {
-    background: ${({ theme }) => theme.jsGradient};
+    background: ${({ theme }) => theme.svelteGradient};
   }
   &.react {
     background: ${({ theme }) => theme.reactGradient};

@@ -53,7 +53,7 @@ const CategoryBg = styled.div`
   &.html {
     background: ${({ theme }) => theme.htmlGradient};
   }
-  &.next {
+  &.next.js {
     background: ${({ theme }) => theme.nextGradient};
   }
   &.svelte {

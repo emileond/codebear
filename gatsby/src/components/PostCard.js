@@ -27,6 +27,27 @@ const StyledPostCard = styled((props) => <Link {...props} />)`
       ${({ theme }) => theme.card} 0
     );
   }
+  &.html {
+    background: linear-gradient(
+      to bottom,
+      #F1946F 5px,
+      ${({ theme }) => theme.card} 0
+    );
+  }
+  &.next.js {
+    background: linear-gradient(
+      to bottom,
+      #32384B 5px,
+      ${({ theme }) => theme.card} 0
+    );
+  }
+  &.svelte {
+    background: linear-gradient(
+      to bottom,
+      #F93F08 5px,
+      ${({ theme }) => theme.card} 0
+    );
+  }
   &.react {
     background: linear-gradient(
       to bottom,
@@ -86,7 +107,7 @@ const StyledPostCard = styled((props) => <Link {...props} />)`
   }
 `;
 
-const PostCard = ({ post }) => {
+function PostCard({ post }) {
   const postCategory = post.category.title.toLowerCase();
   let plainText = '0';
 
@@ -117,10 +138,10 @@ const PostCard = ({ post }) => {
         </span>
       </div>
       {/* {post.image ? (
-          <Img fluid={post.image.asset.fluid} alt={post.title} />
-        ) : null} */}
+                <Img fluid={post.image.asset.fluid} alt={post.title} />
+              ) : null} */}
     </StyledPostCard>
   );
-};
+}
 
 export default PostCard;

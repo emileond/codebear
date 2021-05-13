@@ -16,7 +16,7 @@ export default function CSSPage({ data }) {
       <CategoryHero
         h1={pageCategory === 'JS' ? 'Javascript' : pageCategory}
         p={pageDesc}
-        category={pageCategory.toLowerCase()}
+        category={pageCategory.replace('.', '').toLowerCase()}
       />
       <PostList id={posts.id} posts={posts} />
     </>

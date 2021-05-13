@@ -34,7 +34,7 @@ const StyledPostCard = styled((props) => <Link {...props} />)`
       ${({ theme }) => theme.card} 0
     );
   }
-  &.next.js {
+  &.nextjs {
     background: linear-gradient(
       to bottom,
       #32384B 5px,
@@ -108,7 +108,7 @@ const StyledPostCard = styled((props) => <Link {...props} />)`
 `;
 
 function PostCard({ post }) {
-  const postCategory = post.category.title.toLowerCase();
+  const postCategory = post.category.title.replace('.', '').toLowerCase();
   let plainText = '0';
 
   if (post.body) {

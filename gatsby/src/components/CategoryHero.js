@@ -53,7 +53,7 @@ const CategoryBg = styled.div`
   &.html {
     background: ${({ theme }) => theme.htmlGradient};
   }
-  &.next.js {
+  &.nextjs {
     background: ${({ theme }) => theme.nextGradient};
   }
   &.svelte {
@@ -94,7 +94,7 @@ export default function CategoryHero({ h1, p, category }) {
   else if (category === 'html') {
     icon = <SiHtml5 />;
   }
-  else if (category === 'next.js') {
+  else if (category === 'nextjs') {
     icon = <SiNextDotJs />;
   }
   else if (category === 'svelte') {

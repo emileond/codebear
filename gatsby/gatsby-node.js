@@ -49,7 +49,7 @@ async function turnCategoriesIntoPages({ graphql, actions }) {
 
   data.allSanityCategory.nodes.forEach((cat) => {
     actions.createPage({
-      path: `/${cat.title.toLowerCase()}`,
+      path: `/${cat.title.replace('.', '').toLowerCase()}`,
       component: pageTemplate,
       context: {
         category: cat.title,

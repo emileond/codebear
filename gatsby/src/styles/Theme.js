@@ -35,6 +35,9 @@ export const lightTheme = {
 
   // Category gradients
   jsGradient: 'linear-gradient(to bottom, #ffcf39, #ffa505)',
+  htmlGradient: 'linear-gradient(to bottom, #F1946F, #E44F27)',
+  nextGradient: 'linear-gradient(to bottom, #32384B, #1E272F)',
+  svelteGradient: 'linear-gradient(to bottom, #FA9977, #F93F08)',
   reactGradient: 'linear-gradient(to bottom, #61dafb, #2c8cd2)',
   vueGradient: 'linear-gradient(to bottom, #41b882, #10456d)',
   gatsbyGradient: 'linear-gradient(to bottom, #6b4495, #400a68)',

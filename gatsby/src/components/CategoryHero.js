@@ -7,6 +7,9 @@ import {
   SiGatsby,
   SiCsswizardry,
   SiSass,
+  SiHtml5,
+  SiSvelte,
+  SiNextDotJs,
 } from 'react-icons/si';
 
 const StyledHero = styled.div`
@@ -47,6 +50,15 @@ const CategoryBg = styled.div`
   &.js {
     background: ${({ theme }) => theme.jsGradient};
   }
+  &.html {
+    background: ${({ theme }) => theme.jsGradient};
+  }
+  &.next {
+    background: ${({ theme }) => theme.jsGradient};
+  }
+  &.svelte {
+    background: ${({ theme }) => theme.jsGradient};
+  }
   &.react {
     background: ${({ theme }) => theme.reactGradient};
   }
@@ -78,6 +90,15 @@ export default function CategoryHero({ h1, p, category }) {
     icon = <SiCsswizardry />;
   } else if (category === 'sass') {
     icon = <SiSass />;
+  }
+  else if (category === 'html') {
+    icon = <SiHtml5 />;
+  }
+  else if (category === 'next.js') {
+    icon = <SiNextDotJs />;
+  }
+  else if (category === 'svelte') {
+    icon = <SiSvelte />;
   }
   return (
     <StyledHero>

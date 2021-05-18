@@ -1,20 +1,12 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import styled from 'styled-components';
-import { IoLogoVue } from 'react-icons/io5';
-import {
-  SiJavascript,
-  SiReact,
-  SiGatsby,
-  SiCsswizardry,
-  SiSass,
-} from 'react-icons/si';
-import Hero from '../components/Hero';
-import PostList from '../components/PostLists';
-import MoreCard from '../components/MoreCard';
-import Featured from '../components/Featured';
-import SEO from '../components/SEO';
-import HeroNew from '../components/HeroNew';
+import React from "react";
+import { graphql, Link } from "gatsby";
+import styled from "styled-components";
+import Hero from "../components/Hero";
+import PostList from "../components/PostLists";
+import MoreCard from "../components/MoreCard";
+import Featured from "../components/Featured";
+import SEO from "../components/SEO";
+import HeroNew from "../components/HeroNew";
 
 const H2 = styled.h2`
   text-align: left;
@@ -26,7 +18,7 @@ const H2 = styled.h2`
     &.react {
       color: #5fdcfb;
     }
-    &.vue {
+    &.vue 
       color: #3fb280;
     }
     &.gatsby {
@@ -43,12 +35,9 @@ const H2 = styled.h2`
 
 const HomePage = ({ data }) => {
   const posts = data.allSanityPost.nodes;
-  const jsPosts = posts.filter((post) => post.category.title === 'JS');
-  const reactPosts = posts.filter((post) => post.category.title === 'React');
-  const vuePosts = posts.filter((post) => post.category.title === 'Vue');
-  const gatsbyPosts = posts.filter((post) => post.category.title === 'Gatsby');
-  const sassPosts = posts.filter((post) => post.category.title === 'SASS');
-  const cssPosts = posts.filter((post) => post.category.title === 'CSS');
+  const categories = data.allSanityCategory.nodes.sort((a, b) =>
+    a.title.localeCompare(b.title)
+  );
 
   return (
     <>
@@ -57,68 +46,21 @@ const HomePage = ({ data }) => {
         h1="Front-end fácilmente explicado."
         p="Notas prácticas, concisas y entendibles que te ayudarán a mejorar tus conocimientos de javascript, react, vue, css y más."
       />
+      {categories.map((el) => {
+        let cat = el.title;
+        let catLink = el.title.replace(".", "").toLowerCase();
+        let catPosts = posts.filter((post) => post.category.title === cat);
+        return (
+          <section key={Math.random().toString(36).substr(2, 9)}>
+            <H2 key={catPosts.id}>{el.title}</H2>
+            <PostList id={catPosts.id} posts={catPosts}>
+              <MoreCard link={catLink} category={cat} title={cat} />
+            </PostList>
+          </section>
+        );
+      })}
       {/* <H2>Destacado</H2>
       <Featured /> */}
-      <H2>
-        {/* <SiJavascript className="link-logo js" /> */}
-        Javascript
-      </H2>
-      <PostList id={jsPosts.id} posts={jsPosts}>
-        <MoreCard link="js" category="js" title="Javascript" />
-      </PostList>
-      {/* <Link to={`/${jsPosts[0].category.title.toLowerCase()}`}>
-        Ver todo sobre JS
-      </Link> */}
-      <H2>
-        {/* <SiReact className="link-logo react" /> */}
-        React
-      </H2>
-      <PostList id={reactPosts.id} posts={reactPosts}>
-        <MoreCard link="react" category="react" title="React" />
-      </PostList>
-      {/* <Link to={`/${reactPosts[0].category.title.toLowerCase()}`}>
-        Ver todo sobre React
-      </Link> */}
-      <H2>
-        {/* <IoLogoVue className="link-logo vue" /> */}
-        Vue
-      </H2>
-      <PostList id={vuePosts.id} posts={vuePosts}>
-        <MoreCard link="vue" category="vue" title="Vue" />
-      </PostList>
-      {/* <Link to={`/${vuePosts[0].category.title.toLowerCase()}`}>
-        Ver todo sobre Vue
-      </Link> */}
-      <H2>
-        {/* <SiGatsby className="link-logo gatsby" /> */}
-        Gatsby
-      </H2>
-      <PostList id={gatsbyPosts.id} posts={gatsbyPosts}>
-        <MoreCard link="gatsby" category="gatsby" title="Gatsby" />
-      </PostList>
-      {/* <Link to={`/${gatsbyPosts[0].category.title.toLowerCase()}`}>
-        Ver todo sobre Gatsby
-      </Link> */}
-      <H2>
-        {/* <SiSass className="link-logo sass" /> */}
-        SASS
-      </H2>
-      <PostList id={sassPosts.id} posts={sassPosts}>
-        <MoreCard link="sass" category="sass" title="Sass" />
-      </PostList>
-      {/* <Link to={`/${sassPosts[0].category.title.toLowerCase()}`}>
-        Ver todo sobre SASS
-      </Link> */}
-      <H2>
-        {/* <SiCsswizardry className="link-logo css" /> */}
-        CSS
-      </H2>
-      <PostList id={cssPosts.id} posts={cssPosts}>
-        <MoreCard link="css" category="css" title="CSS" />
-      </PostList>
-      {/* <Link to={`/${cssPosts[0].category.title.toLowerCase()}`}>
-        Ver todo sobre CSS
-      </Link> */}
     </>
   );
 };
@@ -142,6 +84,11 @@ export const query = graphql`
         slug {
           current
         }
+      }
+    }
+    allSanityCategory {
+      nodes {
+        title
       }
     }
   }
